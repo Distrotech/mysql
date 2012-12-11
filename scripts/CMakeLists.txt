@@ -47,7 +47,7 @@ ENDIF()
 ADD_CUSTOM_COMMAND(
   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/mysql_fix_privilege_tables_sql.c
   ${CAT_COMMAND}
-  COMMAND comp_sql
+  COMMAND ../../build-x86_64/scripts/comp_sql
   mysql_fix_privilege_tables
   mysql_fix_privilege_tables.sql
   mysql_fix_privilege_tables_sql.c
