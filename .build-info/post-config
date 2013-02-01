@@ -1,7 +1,10 @@
 #!/bin/bash
 
-g++ -I./include sql/gen_lex_hash.cc -o ../sql/gen_lex_hash
-cp ../sql/gen_lex_hash sql/
-gcc ../scripts/comp_sql.c -o ../scripts/comp_sql
-make -C extra comp_err
+g++ -I../include ..//sql/gen_lex_hash.cc -o sql/gen_lex_hash
+cp sql/gen_lex_hash ../sql/
+
+gcc ../scripts/comp_sql.c -o scripts/comp_sql
 cp ../build-x86_64/extra/comp_err ../extra
+
+#make -C extra comp_err
+
