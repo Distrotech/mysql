@@ -6,5 +6,6 @@ cp sql/gen_lex_hash ../sql/
 gcc ../scripts/comp_sql.c -o scripts/comp_sql
 cp ../build-x86_64/extra/comp_err ../extra
 
-#make -C extra comp_err
-
+if [ "${1}" == "${NARCH}" ];then
+  make ${MAKE_J} -C extra comp_err
+fi;
