@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for hfile in mysql.h errmsg.h mysql_version.h;do
+  if [ -e ${3}/usr/include/${hfile} ] && [ -d ${3}/usr/include/mysql ];then
+    ln -s ../${hfile} ${3}/usr/include/mysql/
+  fi;
+done;
