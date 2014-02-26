@@ -1,8 +1,8 @@
 #!/bin/bash
 
-(cd ${3}/usr/include
+(cd ${3}/${PREFIX}/include
 for hfile in mysql.h errmsg.h mysql_version.h mysqld_*.h;do
-  if [ -e ${3}/usr/include/${hfile} ] && [ -d ${3}/usr/include/mysql ];then
-    ln -s ../${hfile} ${3}/usr/include/mysql/
+  if [ -e ${3}/${PREFIX}/include/${hfile} ] && [ -d ${3}/${PREFIX}/include/mysql ];then
+    ln -s ../${hfile} ${3}/${PREFIX}/include/mysql/
   fi;
 done;)
